@@ -187,31 +187,6 @@ output "egress_only_internet_gateway_id" {
   value       = module.vpc.egress_only_internet_gateway_id
 }
 
-output "cgw_ids" {
-  description = "List of IDs of Customer Gateway"
-  value       = module.vpc.cgw_ids
-}
-
-output "cgw_arns" {
-  description = "List of ARNs of Customer Gateway"
-  value       = module.vpc.cgw_arns
-}
-
-output "this_customer_gateway" {
-  description = "Map of Customer Gateway attributes"
-  value       = module.vpc.this_customer_gateway
-}
-
-output "vgw_id" {
-  description = "The ID of the VPN Gateway"
-  value       = module.vpc.vgw_id
-}
-
-output "vgw_arn" {
-  description = "The ARN of the VPN Gateway"
-  value       = module.vpc.vgw_arn
-}
-
 output "default_vpc_id" {
   description = "The ID of the Default VPC"
   value       = module.vpc.default_vpc_id
@@ -282,55 +257,6 @@ output "private_network_acl_arn" {
   value       = module.vpc.private_network_acl_arn
 }
 
-output "outpost_network_acl_id" {
-  description = "ID of the outpost network ACL"
-  value       = module.vpc.outpost_network_acl_id
-}
-
-output "outpost_network_acl_arn" {
-  description = "ARN of the outpost network ACL"
-  value       = module.vpc.outpost_network_acl_arn
-}
-
-output "intra_network_acl_id" {
-  description = "ID of the intra network ACL"
-  value       = module.vpc.intra_network_acl_id
-}
-
-output "intra_network_acl_arn" {
-  description = "ARN of the intra network ACL"
-  value       = module.vpc.intra_network_acl_arn
-}
-
-output "database_network_acl_id" {
-  description = "ID of the database network ACL"
-  value       = module.vpc.database_network_acl_id
-}
-
-output "database_network_acl_arn" {
-  description = "ARN of the database network ACL"
-  value       = module.vpc.database_network_acl_arn
-}
-
-output "redshift_network_acl_id" {
-  description = "ID of the redshift network ACL"
-  value       = module.vpc.redshift_network_acl_id
-}
-
-output "redshift_network_acl_arn" {
-  description = "ARN of the redshift network ACL"
-  value       = module.vpc.redshift_network_acl_arn
-}
-
-output "elasticache_network_acl_id" {
-  description = "ID of the elasticache network ACL"
-  value       = module.vpc.elasticache_network_acl_id
-}
-
-output "elasticache_network_acl_arn" {
-  description = "ARN of the elasticache network ACL"
-  value       = module.vpc.elasticache_network_acl_arn
-}
 
 # VPC flow log
 output "vpc_flow_log_id" {
