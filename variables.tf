@@ -9,9 +9,16 @@ variable "Name" { default = "" }
 
 variable "private_subnets" { default = []}
 variable "public_subnets" { default = []}
+variable "database_subnets" { default = []}
+variable "elasticache_subnets" { default = []}
+variable "redshift_subnets" { default = []}
+variable "intra_subnets" { default = []}
 
 variable "cidr" { default = "" }
 
+
+#parameters database
+variable "create_database_subnet_group" { default = "" }
 
 #parameters acccess control list (ACL)
 variable "manage_default_network_acl" { default = "" }
@@ -21,9 +28,13 @@ variable "manage_default_security_group" { default = "" }
 #parameters dns
 variable "enable_dns_hostnames" { default = "" }
 variable "enable_dns_support" { default = "" }
+variable "enable_classiclink" { default = "" }
+variable "enable_classiclink_dns_support" { default = "" }
 
 #parameters NAT gw
 variable "enable_nat_gateway" { default = "" }
+variable "single_nat_gateway" { default = "" }
+variable "enable_vpn_gateway" { default = "" }
 
 //#parameters dhcp
 variable "enable_dhcp_options" { default = "" }
