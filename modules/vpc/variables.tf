@@ -448,6 +448,11 @@ variable "private_subnet_tags" {
   default     = {}
 }
 
+variable "outpost_subnet_tags" {
+  description = "Additional tags for the outpost subnets"
+  type        = map(string)
+  default     = {}
+}
 
 variable "public_route_table_tags" {
   description = "Additional tags for the public route tables"
@@ -1182,8 +1187,23 @@ variable "flow_log_per_hour_partition" {
   default     = false
 }
 
-variable "putin_khuylo" {
-  description = "Do you agree that Putin doesn't respect Ukrainian sovereignty and territorial integrity? More info: https://en.wikipedia.org/wiki/Putin_khuylo!"
-  type        = bool
-  default     = true
-}
+# variable "putin_khuylo" {
+#   description = "Do you agree that Putin doesn't respect Ukrainian sovereignty and territorial integrity? More info: https://en.wikipedia.org/wiki/Putin_khuylo!"
+#   type        = bool
+#   default     = true
+# }
+
+variable "data-classification" { default = "" } 
+variable "businessunit" { default = "" }
+variable "environment" { default = "" }
+variable "application-id" { default = "" }
+variable "application-name" { default = "" }
+variable "application-owner" { default = "" }
+variable "application-role" { default = "" }
+variable "SCOA" { default = "" }
+variable "project-id" { default = "" }
+variable "PII" { default = "" }
+variable "compliance" { default = "" }
+variable "TFE" { default = "" }
+variable "security-group-name" { default = ""}
+

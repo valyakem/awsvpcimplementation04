@@ -3,11 +3,9 @@
 //                  NETWORKING SETTINGS                               //
 //====================================================================//
 #information section
-name                = "nbvpc"
+# name                = "nbvpc"
 region              = "us-east-1"
-Owner               = "user"
-Environment         = "staging"
-Name                = "nbvpc"
+name                = "nbvpc"
 
 
 #network settings
@@ -19,9 +17,7 @@ public_subnets      = ["20.10.11.0/24", "20.10.12.0/24", "20.10.13.0/24"]
 # intra_subnets       = ["20.10.51.0/24", "20.10.52.0/24", "20.10.53.0/24"]
 
 cidr = "20.10.0.0/16"
-
-#parameters database
-create_database_subnet_group = false 
+ 
 
 #parameters acccess control list (ACL)
 manage_default_network_acl = true
@@ -31,13 +27,9 @@ manage_default_security_group = true
 #parameters dns
 enable_dns_hostnames = true
 enable_dns_support   = true
-enable_classiclink             = true
-enable_classiclink_dns_support = true
 
 #parameters NAT gw
 enable_nat_gateway = true
-single_nat_gateway = true
-enable_vpn_gateway = true
 
 //#parameters dhcp
 enable_dhcp_options              = true
@@ -65,8 +57,8 @@ security-group-description  = "sg-with-egressrule-and-ingressrules-sg03"
 //====================================================================//
 //                  TAGS SETTINGS                                     //
 //====================================================================//
-business_unit               = "inf"
-data_classification         = "internal"
+businessunit               = "inf"
+data-classification         = "internal"
 environment                 = "sandbox"
 application-id              = "1234"
 application-name            = "tehchub"

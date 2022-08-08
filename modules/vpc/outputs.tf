@@ -108,6 +108,26 @@ output "public_subnets_ipv6_cidr_blocks" {
   value       = compact(aws_subnet.public[*].ipv6_cidr_block)
 }
 
+output "outpost_subnets" {
+  description = "List of IDs of outpost subnets"
+  value       = aws_subnet.outpost[*].id
+}
+
+output "outpost_subnet_arns" {
+  description = "List of ARNs of outpost subnets"
+  value       = aws_subnet.outpost[*].arn
+}
+
+output "outpost_subnets_cidr_blocks" {
+  description = "List of cidr_blocks of outpost subnets"
+  value       = compact(aws_subnet.outpost[*].cidr_block)
+}
+
+output "outpost_subnets_ipv6_cidr_blocks" {
+  description = "List of IPv6 cidr_blocks of outpost subnets in an IPv6 enabled VPC"
+  value       = compact(aws_subnet.outpost[*].ipv6_cidr_block)
+}
+
 output "database_subnets" {
   description = "List of IDs of database subnets"
   value       = aws_subnet.database[*].id
