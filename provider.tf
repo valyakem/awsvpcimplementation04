@@ -1,5 +1,6 @@
 provider "aws" {
   region  = "us-east-1"
+  alias = "destination"
   profile = "destination"
 
   assume_role {
