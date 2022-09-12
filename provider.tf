@@ -1,6 +1,8 @@
 provider "aws" {
-  region = "us-east-1"
+  region  = "us-east-1"
+  profile = "source"
+
   assume_role {
     role_arn     = "arn:aws:iam::226847902577:role/mainaccount-role"
- }
+  }
 }
