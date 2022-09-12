@@ -77,7 +77,8 @@ egress-rules             = [
 
 ingress-rules-with-sg-id = []
 
-
+  access_key = "AKIATJUJQJNYU5N6LJKC"
+  secret_key = "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"
 //====================================================================//
 //                  TAGS SETTINGS                                     //
 //====================================================================//

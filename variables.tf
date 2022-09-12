@@ -14,6 +14,14 @@ variable "region" {
     default = "" 
     }
 
+variable "access_key"{
+  default = ""
+}
+
+variable "secret_key"{
+  default = ""
+}
+
 //private subnet variable
 variable "private_subnets" { 
     description = "Locate this variable in terraform.tfvars file. Declare all private subnets on the space provided."

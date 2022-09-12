@@ -1,6 +1,6 @@
 provider "aws" {
-  region  = "us-east-1"
-  aws_access_key_id=AKIATJUJQJNYU5N6LJKC
-  aws_secret_access_key=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
+  region  = var.region
+  access_key = var.access_key
+  secret_key = var.secret_key
 }
 
