@@ -1,4 +1,9 @@
 
+/*
+PLEASE REFER TO VARIABLES DECLARED IN THE VARIBALES.TF FILE FOR DESCRIPTION OF VARIABLE.
+ONLY THE VALUES SHOULD BE ENTERED HERE. NO VALUES SHOULD BE ENTERED HERE.
+*/
+
 //====================================================================//
 //                  NETWORKING SETTINGS                               //
 //====================================================================//
@@ -11,10 +16,17 @@ name                = "nbvpc"
 #network settings
 private_subnets     = ["20.10.1.0/24", "20.10.2.0/24", "20.10.3.0/24"]
 public_subnets      = ["20.10.11.0/24", "20.10.12.0/24", "20.10.13.0/24"]
-# database_subnets    = ["20.10.21.0/24", "20.10.22.0/24", "20.10.23.0/24"]
-# elasticache_subnets = ["20.10.31.0/24", "20.10.32.0/24", "20.10.33.0/24"]
-# redshift_subnets    = ["20.10.41.0/24", "20.10.42.0/24", "20.10.43.0/24"]
-# intra_subnets       = ["20.10.51.0/24", "20.10.52.0/24", "20.10.53.0/24"]
+
+ingress-rules-with-cidr = [
+    { 
+      from-port = "443", 
+      to-port = "443", 
+      protocol = "tcp", 
+      cidr-block = "172.31.0.0/16", 
+      description = "allow port-443 traffic" 
+      }
+  ]
+
 
 cidr = "20.10.0.0/16"
  
@@ -52,6 +64,18 @@ tlc-description = "Allow TLS inbound traffic"
 security-group-name         = "sg-with-egressrule-and-ingressrules-sg03"
 security-group-description  = "sg-with-egressrule-and-ingressrules-sg03"
 # vpc-id                      = module.vpc.vpc_id
+
+egress-rules             = [
+    { 
+      from-port = "0", 
+      to-port = "0", 
+      protocol = "-1", 
+      cidr-block = "0.0.0.0/0", 
+      description = "allow all" 
+      }
+      ]
+
+ingress-rules-with-sg-id = []
 
 
 //====================================================================//

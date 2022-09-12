@@ -16,3 +16,10 @@ locals {
     businessunit        = var.businessunit
   }
 }
+
+
+# #EC2 instance build
+# #-------------------------
+# vpc_id = "vpc-040c07e3a2f885807"
+# subnet_id = "172.31.0.0/20"
+# ami_id = "ami-0d1c65a30da7a25aa"

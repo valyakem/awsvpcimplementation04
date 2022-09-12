@@ -1,6 +1,6 @@
-provider "aws" {
-  region = var.region
-}
+# provider "aws" {
+#   region = var.region
+# }
 
 locals {
   name   = var.name
@@ -91,25 +91,10 @@ module "dynamic-sg-with-egressrule-and-ingressrules" {
   security-group-name        = var.security-group-name
   security-group-description = var.security-group-description
   vpc-id                     = var.vpc-id
-  ingress-rules-with-cidr = [
-    { 
-      from-port = "443", 
-      to-port = "443", 
-      protocol = "tcp", 
-      cidr-block = "172.31.0.0/16", 
-      description = "allow port-443 traffic" 
-      }
-  ]
-  egress-rules             = [
-    { 
-      from-port = "0", 
-      to-port = "0", 
-      protocol = "-1", 
-      cidr-block = "0.0.0.0/0", 
-      description = "allow all" 
-      }
-      ]
-  ingress-rules-with-sg-id = []
+  ingress-rules-with-cidr = var.ingress-rules-with-cidr
+
+  egress-rules             = var.egress-rules
+  ingress-rules-with-sg-id = var.ingress-rules-with-sg-id
 
   # Tagging variabless
   businessunit        = var.businessunit
